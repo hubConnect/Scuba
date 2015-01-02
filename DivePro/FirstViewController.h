@@ -11,8 +11,8 @@
 #import <GoogleMaps/GoogleMaps.h>
 
 @interface FirstViewController : UIViewController
+<GMSMapViewDelegate>
 
-@property (strong, nonatomic) IBOutlet MKMapView *MapView;
 
 @end
 

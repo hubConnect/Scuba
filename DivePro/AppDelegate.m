@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import <GoogleMaps/GoogleMaps.h>
+#import <Parse/Parse.h>
 
 @interface AppDelegate ()
 
@@ -18,11 +19,22 @@ UITabBarController *UITB;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [Parse enableLocalDatastore];
+    
+    // Initialize Parse.
+    [Parse setApplicationId:@"c4ET37KgIktLydWepkY4OVFk5pj1VGVHMojMtVAR"
+                  clientKey:@"gh8N7HQviE5fZqQgertHZYuHayvXqDfQJnEGVu3K"];
+    
+    // [Optional] Track statistics around application opens.
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     [GMSServices provideAPIKey:@"AIzaSyBHw_TyGKh9dqUsBOMnCsBOSuw2YGnWmXc"];
     
     UITB = [[UITabBarController alloc] init];NSShadow *shadow = [[NSShadow alloc] init];
     shadow.shadowColor = [UIColor blackColor];
     shadow.shadowBlurRadius = 0.0;
+    
+    // Initialize Parse.
     shadow.shadowOffset = CGSizeMake(0.0, 0.0);
     [[UINavigationBar appearance] setTitleTextAttributes: @{
                                                             NSForegroundColorAttributeName : [UIColor blackColor],

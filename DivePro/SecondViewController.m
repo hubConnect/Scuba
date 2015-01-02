@@ -14,6 +14,18 @@
 
 @implementation SecondViewController
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    UITouch *touch ;
+    touch = [[event allTouches] anyObject];
+    NSLog(@"Touch event");
+    
+    if ([touch view] == self.view)
+    {
+        NSLog(@"Touched map");
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
