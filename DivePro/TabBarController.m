@@ -1,37 +1,27 @@
 //
-//  MainTabController.m
+//  TabBarController.m
 //  DivePro
 //
-//  Created by Jon Kotowski on 12/17/14.
-//  Copyright (c) 2014 Jon Kotowski. All rights reserved.
+//  Created by Jon Kotowski on 1/2/15.
+//  Copyright (c) 2015 Jon Kotowski. All rights reserved.
 //
 
-#import "MainTabController.h"
+#import "TabBarController.h"
 
-@interface MainTabController ()
+@interface TabBarController ()
 
 @end
 
-@implementation MainTabController
+@implementation TabBarController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    [[UITabBar appearance] setTintColor:[UIColor orangeColor]];
-    
-    
-    [self setNavigationButton];
     // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (void) setNavigationButton {
-    
-    self.navigationController.navigationItem.rightBarButtonItem.title = @"Blah";
 }
 
 /*

@@ -27,6 +27,7 @@
     NSMutableDictionary *dictionaryOfMarkerInfo;
     NSMutableArray *arrayOfLocations;
     NSOperationQueue *opQueue;
+    NSOperationQueue *mainQueue;
     NSMutableArray *arrayOfMarkers;
 }
 
@@ -90,6 +91,10 @@
     return view;
 }
 
+-(void)mapView:(GMSMapView *)mapView didTapInfoWindowOfMarker:(GMSMarker *)marker {
+    NSLog(@"Hit info window");
+}
+
 -(BOOL)mapView:(GMSMapView *)mapView didTapMarker:(GMSMarker *)marker
 {
     
@@ -111,7 +116,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     opQueue = [[NSOperationQueue alloc] init];
-    
+    mainQueue = [NSOperationQueue mainQueue];
     [opQueue addOperationWithBlock:^{
         
         
@@ -151,6 +156,8 @@
     }];
     
     [self downloadLocations];
+    AppDelegate *appD = [UIApplication sharedApplication].delegate;
+    
     NSLog(@"starting");
 }
 
@@ -188,7 +195,7 @@
         }
         
         NSLog(@"Fetched");
-
+        
         [self addMarkersToMap:arrayOfLocations];
         appd.arrayOfLocations = arrayOfLocations;
     }];
@@ -272,10 +279,23 @@
 
 - (BOOL) addMarkersToMap : (NSArray
                             *) arrayOfMarkers {
+    NSLog(@"Adding markers");
     
-    for (DiveLocation * location in arrayOfLocations  ) {
-        [self buildMarker:location];
-    }
+    [opQueue addOperationWithBlock:^{
+        
+        for (DiveLocation * location in arrayOfLocations  ) {
+            [mainQueue addOperationWithBlock:^{
+                
+                [self buildMarker:location];
+                
+            }];
+            [NSThread sleepForTimeInterval:.05];
+            NSLog(@"hit");
+        }
+        
+        
+    }];
+    NSLog(@"Markers added");
     
     return YES;
 }

@@ -14,24 +14,36 @@
 		<string>https://github.com/mardymar/xdcfvgb.git</string>
 		<key>DF624587A30CC452B4580AE6576CE3668CAB73C6</key>
 		<string>https://github.com/hubConnect/DivePro.git</string>
+		<key>E5B177D90DB30AB7C1E8218F2EEAAA41E9DB03D1</key>
+		<string>https://github.com/hubConnect/Scuba.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>DivePro.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>6BC65A9C38F9FC73AFE1FE7CF9007D162FAEFE06</key>
-		<string>../..</string>
+		<string>../../../Scuba</string>
 		<key>DF624587A30CC452B4580AE6576CE3668CAB73C6</key>
-		<string>../../../DivePro</string>
+		<string>../..Pro</string>
+		<key>E5B177D90DB30AB7C1E8218F2EEAAA41E9DB03D1</key>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/mardymar/xdcfvgb.git</string>
+	<string>https://github.com/hubConnect/Scuba.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>6BC65A9C38F9FC73AFE1FE7CF9007D162FAEFE06</string>
+	<string>E5B177D90DB30AB7C1E8218F2EEAAA41E9DB03D1</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E5B177D90DB30AB7C1E8218F2EEAAA41E9DB03D1</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Dive</string>
+		</dict>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
