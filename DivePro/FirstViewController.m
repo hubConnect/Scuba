@@ -120,8 +120,6 @@
     [opQueue addOperationWithBlock:^{
         
         
-        
-        
         NSLog(@"Ending operation.");
 
         
@@ -155,7 +153,9 @@
 
     }];
     
-    [self downloadLocations];
+    //[self downloadLocations];
+    [self buildRandomMarkers:50];
+    [self addMarkersToMap:arrayOfLocations inGroupsOf:4];
     AppDelegate *appD = [UIApplication sharedApplication].delegate;
     
     NSLog(@"starting");
@@ -196,7 +196,7 @@
         
         NSLog(@"Fetched");
         
-        [self addMarkersToMap:arrayOfLocations];
+        [self addMarkersToMap:arrayOfLocations inGroupsOf:60];
         appd.arrayOfLocations = arrayOfLocations;
     }];
 }
@@ -224,7 +224,7 @@
     
     for(int i = 0; i < Amount; i++) {
         
-        long longit = (random() % 90);
+        long longit = (random() % 180);
         int chance = (int) random() % 2;
         if (chance == 0) {
             longit = longit * -1;
@@ -274,28 +274,47 @@
 
         }];
     }
+    AppDelegate * appD = [UIApplication sharedApplication].delegate;
+    appD.arrayOfLocations = [arrayOfLocations copy];
+    NSLog(@"%d items created for array",appD.arrayOfLocations.count);
 
 }
 
 - (BOOL) addMarkersToMap : (NSArray
-                            *) arrayOfMarkers {
+                            *) arrayOfMarkers inGroupsOf: (int) amount {
     NSLog(@"Adding markers");
     
+    __block NSMutableArray *tempArray = [[NSMutableArray alloc] init];
+    
     [opQueue addOperationWithBlock:^{
-        
+        NSLog(@"%d items in array",tempArray.count);
         for (DiveLocation * location in arrayOfLocations  ) {
             [mainQueue addOperationWithBlock:^{
                 
-                [self buildMarker:location];
+                [tempArray addObject:location];
                 
+                if ((tempArray.count % amount == 0)) {
+                    
+                    for (DiveLocation *dive in tempArray) {
+                        [self buildMarker:dive];
+                        NSLog(@"Adding a marker!");
+                    }
+                    
+                    [tempArray removeAllObjects];
+                    [NSThread sleepForTimeInterval:.05];
+                }
             }];
-            [NSThread sleepForTimeInterval:.05];
-            NSLog(@"hit");
         }
+        NSLog(@"%d",tempArray.count);
         
-        
+        if (tempArray.count != 0) {
+            for (DiveLocation *dive in tempArray) {
+                [mainQueue addOperationWithBlock:^{
+                    [self buildMarker:dive];
+                }];
+            }
+        }
     }];
-    NSLog(@"Markers added");
     
     return YES;
 }

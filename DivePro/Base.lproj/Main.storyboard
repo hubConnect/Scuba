@@ -30,6 +30,9 @@
                                                 <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XHu-Qp-OFm" userLabel="RatingView">
                                                     <rect key="frame" x="99" y="37" width="113" height="24"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="99" y="38" width="126" height="24"/>
+                                                    </variation>
                                                 </view>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pje-O9-LjG" userLabel="Picture">
                                                     <rect key="frame" x="8" y="10" width="83" height="82"/>
@@ -42,8 +45,10 @@
                                                 </label>
                                             </subviews>
                                             <color key="backgroundColor" red="0.767526455026455" green="0.38672535999820823" blue="0.0068830788557530604" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="tintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="tintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="NameLabel" destination="huW-QR-pHu" id="Nxm-Nm-wxb"/>
                                             <outlet property="Photo" destination="pje-O9-LjG" id="wKQ-de-ZxC"/>
@@ -53,15 +58,26 @@
                                 </prototypes>
                                 <sections/>
                             </tableView>
-                            <searchBar contentMode="redraw" ambiguous="YES" misplaced="YES" searchBarStyle="prominent" translatesAutoresizingMaskIntoConstraints="NO" id="yqi-aa-aWy">
-                                <rect key="frame" x="0.0" y="64" width="600" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7CD-fz-6fW">
+                                <rect key="frame" x="538" y="71" width="46" height="30"/>
+                                <state key="normal" title="Filter">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="338" y="64" width="62" height="44"/>
+                                </variation>
+                            </button>
+                            <searchBar contentMode="redraw" ambiguous="YES" misplaced="YES" searchBarStyle="minimal" text="" translatesAutoresizingMaskIntoConstraints="NO" id="yqi-aa-aWy">
+                                <rect key="frame" x="0.0" y="64" width="526" height="44"/>
                                 <color key="barTintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="-3" y="64" width="341" height="44"/>
+                                </variation>
                             </searchBar>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="yqi-aa-aWy" firstAttribute="width" secondItem="uub-5n-tud" secondAttribute="width" id="BbT-qT-8pC"/>
                             <constraint firstItem="2Wm-bd-tGc" firstAttribute="top" secondItem="yqi-aa-aWy" secondAttribute="bottom" constant="2" id="T4r-mk-v2S"/>
                             <constraint firstItem="2Wm-bd-tGc" firstAttribute="width" secondItem="uub-5n-tud" secondAttribute="width" id="hFm-UP-Fs0"/>
                         </constraints>
@@ -73,7 +89,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QOh-BD-hSR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="846" y="764"/>
+            <point key="canvasLocation" x="846" y="763"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Xde-mh-PLh">
