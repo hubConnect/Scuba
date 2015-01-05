@@ -80,7 +80,7 @@
     NSString *string = dive.Name;
     view.NameLabel.text = dive.Name;
     DYRateView *rateView = [[DYRateView alloc] initWithFrame:view.RatingRect.frame
-        fullStar:[UIImage imageNamed:@"StarFullLarge.png"] emptyStar:[UIImage imageNamed:@"StarEmptyLarge.png"]];
+        fullStar:[UIImage imageNamed:@"full_flag.png"] emptyStar:[UIImage imageNamed:@"empty_flag.png"]];
     [rateView setRate:dive.Rating];
     
     view.RatingRect = rateView;
