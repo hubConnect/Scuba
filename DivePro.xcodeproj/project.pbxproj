@@ -20,10 +20,6 @@
 		7F60D7C81A4A00FB009A57A7 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FBBAA141A401D6700B312D6 /* libc++.dylib */; };
 		7F60D7C91A4A0109009A57A7 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FBBAA161A401D7600B312D6 /* libicucore.dylib */; };
 		7F60D7CA1A4A011B009A57A7 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FBBAA1A1A401D8B00B312D6 /* OpenGLES.framework */; };
-		7F60D7CC1A4A0230009A57A7 /* Bolts.framework in Resources */ = {isa = PBXBuildFile; fileRef = 7FB579241A49FE67007791D4 /* Bolts.framework */; };
-		7F60D7CD1A4A0230009A57A7 /* Parse.framework in Resources */ = {isa = PBXBuildFile; fileRef = 7FB579251A49FE67007791D4 /* Parse.framework */; };
-		7F60D7CE1A4A0230009A57A7 /* ParseCrashReporting.framework in Resources */ = {isa = PBXBuildFile; fileRef = 7FB579261A49FE67007791D4 /* ParseCrashReporting.framework */; };
-		7F60D7CF1A4A0230009A57A7 /* ParseUI.framework in Resources */ = {isa = PBXBuildFile; fileRef = 7FB579281A49FE67007791D4 /* ParseUI.framework */; };
 		7F796ECC1A4A053D0070129F /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F796EC71A4A053D0070129F /* Bolts.framework */; };
 		7F796ECD1A4A053D0070129F /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F796EC81A4A053D0070129F /* Parse.framework */; };
 		7F796ED01A4A053D0070129F /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F796ECB1A4A053D0070129F /* ParseUI.framework */; };
@@ -33,7 +29,6 @@
 		7F796ED51A4A06E00070129F /* ParseCrashReporting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F796EC91A4A053D0070129F /* ParseCrashReporting.framework */; };
 		7F7A9F031A5013A300B542DA /* DYRateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F7A9F021A5013A300B542DA /* DYRateView.m */; };
 		7F7A9F0C1A5016E500B542DA /* StarEmpty.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F7A9F041A5016E500B542DA /* StarEmpty.png */; };
-		7F7A9F0D1A5016E500B542DA /* StarEmpty@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F7A9F051A5016E500B542DA /* StarEmpty@2x.png */; };
 		7F7A9F0E1A5016E500B542DA /* StarEmptyLarge.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F7A9F061A5016E500B542DA /* StarEmptyLarge.png */; };
 		7F7A9F0F1A5016E500B542DA /* StarEmptyLarge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F7A9F071A5016E500B542DA /* StarEmptyLarge@2x.png */; };
 		7F7A9F101A5016E500B542DA /* StarFull.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F7A9F081A5016E500B542DA /* StarFull.png */; };
@@ -43,6 +38,8 @@
 		7FA61E7E1A57723C00ABCB91 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA61E7D1A57723C00ABCB91 /* TabBarController.m */; };
 		7FA61E891A5A3B6A00ABCB91 /* full_flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FA61E871A5A3B6A00ABCB91 /* full_flag.png */; };
 		7FA61E8A1A5A3B6A00ABCB91 /* empty_flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FA61E881A5A3B6A00ABCB91 /* empty_flag.png */; };
+		7FA61E8B1A5A4F5900ABCB91 /* Parse.framework in Resources */ = {isa = PBXBuildFile; fileRef = 7F796EC81A4A053D0070129F /* Parse.framework */; };
+		7FA61E8C1A5A4F6200ABCB91 /* Bolts.framework in Resources */ = {isa = PBXBuildFile; fileRef = 7F796EC71A4A053D0070129F /* Bolts.framework */; };
 		7FB578F11A48CCC8007791D4 /* new-maker.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FB578EF1A48CCC8007791D4 /* new-maker.png */; };
 		7FB578F21A48CCC8007791D4 /* infowindow.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FB578F01A48CCC8007791D4 /* infowindow.png */; };
 		7FB578F41A48CCE9007791D4 /* InfoWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FB578F31A48CCE9007791D4 /* InfoWindow.xib */; };
@@ -138,10 +135,6 @@
 		7FB579061A490962007791D4 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		7FB579081A490978007791D4 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		7FB5790A1A490980007791D4 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		7FB579241A49FE67007791D4 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "/Users/JonKotowski/Downloads/parse-library-1.6.1/Bolts.framework"; sourceTree = "<absolute>"; };
-		7FB579251A49FE67007791D4 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "/Users/JonKotowski/Downloads/parse-library-1.6.1/Parse.framework"; sourceTree = "<absolute>"; };
-		7FB579261A49FE67007791D4 /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = "/Users/JonKotowski/Downloads/parse-library-1.6.1/ParseCrashReporting.framework"; sourceTree = "<absolute>"; };
-		7FB579281A49FE67007791D4 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = "/Users/JonKotowski/Downloads/parse-library-1.6.1/ParseUI.framework"; sourceTree = "<absolute>"; };
 		7FB579381A49FEE8007791D4 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		7FB5793A1A49FF5B007791D4 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		7FB5793C1A49FF65007791D4 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
@@ -496,11 +489,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F60D7CC1A4A0230009A57A7 /* Bolts.framework in Resources */,
-				7F60D7CD1A4A0230009A57A7 /* Parse.framework in Resources */,
-				7F7A9F0D1A5016E500B542DA /* StarEmpty@2x.png in Resources */,
-				7F60D7CE1A4A0230009A57A7 /* ParseCrashReporting.framework in Resources */,
-				7F60D7CF1A4A0230009A57A7 /* ParseUI.framework in Resources */,
+				7FA61E8C1A5A4F6200ABCB91 /* Bolts.framework in Resources */,
+				7FA61E8B1A5A4F5900ABCB91 /* Parse.framework in Resources */,
 				7FA61E8A1A5A3B6A00ABCB91 /* empty_flag.png in Resources */,
 				7FB578F41A48CCE9007791D4 /* InfoWindow.xib in Resources */,
 				7F7A9F0F1A5016E500B542DA /* StarEmptyLarge@2x.png in Resources */,
