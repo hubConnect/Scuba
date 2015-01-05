@@ -153,8 +153,8 @@
 
     }];
     
-    //[self downloadLocations];
-    [self buildRandomMarkers:50];
+    [self downloadLocations];
+    //[self buildRandomMarkers:50];
     [self addMarkersToMap:arrayOfLocations inGroupsOf:4];
     AppDelegate *appD = [UIApplication sharedApplication].delegate;
     
