@@ -7,6 +7,7 @@
 //
 
 #import "SecondViewController.h"
+#import "AppDelegate.h"
 
 @interface SecondViewController ()
 
@@ -28,6 +29,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    AppDelegate *appD = [UIApplication sharedApplication].delegate;
+    appD.mainNav = self;
+    NSLog(@"loaded");
     // Do any additional setup after loading the view, typically from a nib.
 }
 

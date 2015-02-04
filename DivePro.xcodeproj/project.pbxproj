@@ -20,7 +20,6 @@
 		7F60D7C81A4A00FB009A57A7 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FBBAA141A401D6700B312D6 /* libc++.dylib */; };
 		7F60D7C91A4A0109009A57A7 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FBBAA161A401D7600B312D6 /* libicucore.dylib */; };
 		7F60D7CA1A4A011B009A57A7 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FBBAA1A1A401D8B00B312D6 /* OpenGLES.framework */; };
-		7F796ECC1A4A053D0070129F /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F796EC71A4A053D0070129F /* Bolts.framework */; };
 		7F796ECD1A4A053D0070129F /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F796EC81A4A053D0070129F /* Parse.framework */; };
 		7F796ED01A4A053D0070129F /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F796ECB1A4A053D0070129F /* ParseUI.framework */; };
 		7F796ED11A4A058A0070129F /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FB5793C1A49FF65007791D4 /* Accounts.framework */; };
@@ -35,11 +34,13 @@
 		7F7A9F111A5016E500B542DA /* StarFull@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F7A9F091A5016E500B542DA /* StarFull@2x.png */; };
 		7F7A9F121A5016E500B542DA /* StarFullLarge.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F7A9F0A1A5016E500B542DA /* StarFullLarge.png */; };
 		7F7A9F131A5016E500B542DA /* StarFullLarge@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F7A9F0B1A5016E500B542DA /* StarFullLarge@2x.png */; };
+		7F84C4B41A5F513E00119B24 /* SearchView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F84C4B31A5F513E00119B24 /* SearchView.xib */; };
+		7F84C4B71A5F948800119B24 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F84C4B61A5F948800119B24 /* ViewController.m */; };
+		7F84C4BA1A5F949F00119B24 /* DiveDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F84C4B91A5F949F00119B24 /* DiveDetailController.m */; };
 		7FA61E7E1A57723C00ABCB91 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FA61E7D1A57723C00ABCB91 /* TabBarController.m */; };
 		7FA61E891A5A3B6A00ABCB91 /* full_flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FA61E871A5A3B6A00ABCB91 /* full_flag.png */; };
 		7FA61E8A1A5A3B6A00ABCB91 /* empty_flag.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FA61E881A5A3B6A00ABCB91 /* empty_flag.png */; };
 		7FA61E8B1A5A4F5900ABCB91 /* Parse.framework in Resources */ = {isa = PBXBuildFile; fileRef = 7F796EC81A4A053D0070129F /* Parse.framework */; };
-		7FA61E8C1A5A4F6200ABCB91 /* Bolts.framework in Resources */ = {isa = PBXBuildFile; fileRef = 7F796EC71A4A053D0070129F /* Bolts.framework */; };
 		7FB578F11A48CCC8007791D4 /* new-maker.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FB578EF1A48CCC8007791D4 /* new-maker.png */; };
 		7FB578F21A48CCC8007791D4 /* infowindow.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FB578F01A48CCC8007791D4 /* infowindow.png */; };
 		7FB578F41A48CCE9007791D4 /* InfoWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FB578F31A48CCE9007791D4 /* InfoWindow.xib */; };
@@ -65,6 +66,7 @@
 		7FBBAA371A42093300B312D6 /* place_picker_nav_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FBBAA331A42093300B312D6 /* place_picker_nav_back@2x.png */; };
 		7FBBAA381A42093300B312D6 /* place_picker_search_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FBBAA341A42093300B312D6 /* place_picker_search_icon.png */; };
 		7FBBAA391A42093300B312D6 /* place_picker_search_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FBBAA351A42093300B312D6 /* place_picker_search_icon@2x.png */; };
+		7FBEC2591A661DD700F444DA /* DiveCellCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FBEC2581A661DD700F444DA /* DiveCellCollectionViewCell.m */; };
 		7FC487A11A37C83E0021C563 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FC4878F1A37C83E0021C563 /* icon@2x.png */; };
 		7FC487A21A37C83E0021C563 /* xq_icon_more.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FC487901A37C83E0021C563 /* xq_icon_more.png */; };
 		7FC487A31A37C83E0021C563 /* xq_icon_distance.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FC487911A37C83E0021C563 /* xq_icon_distance.png */; };
@@ -85,6 +87,8 @@
 		7FE1CB1A1A31A7FE001C8FD2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FE1CB191A31A7FE001C8FD2 /* Images.xcassets */; };
 		7FE1CB1D1A31A7FE001C8FD2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FE1CB1B1A31A7FE001C8FD2 /* LaunchScreen.xib */; };
 		7FE1CB291A31A7FE001C8FD2 /* DiveProTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FE1CB281A31A7FE001C8FD2 /* DiveProTests.m */; };
+		7FFE42B41A5DCC410070CC7C /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FFE42B31A5DCC410070CC7C /* FacebookSDK.framework */; };
+		7FFE42B51A5DCD7B0070CC7C /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F796ECA1A4A053D0070129F /* ParseFacebookUtils.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,7 +110,6 @@
 		7F5ACA2B1A4FCA140080A87D /* DiveRowCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiveRowCell.xib; sourceTree = "<group>"; };
 		7F5ACA2D1A4FCAE50080A87D /* DiveLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiveLocation.h; sourceTree = "<group>"; };
 		7F5ACA2E1A4FCAE50080A87D /* DiveLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiveLocation.m; sourceTree = "<group>"; };
-		7F796EC71A4A053D0070129F /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bolts.framework; path = "parse-library-1.6.1/Bolts.framework"; sourceTree = "<group>"; };
 		7F796EC81A4A053D0070129F /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "parse-library-1.6.1/Parse.framework"; sourceTree = "<group>"; };
 		7F796EC91A4A053D0070129F /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = "parse-library-1.6.1/ParseCrashReporting.framework"; sourceTree = "<group>"; };
 		7F796ECA1A4A053D0070129F /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = "parse-library-1.6.1/ParseFacebookUtils.framework"; sourceTree = "<group>"; };
@@ -122,6 +125,11 @@
 		7F7A9F091A5016E500B542DA /* StarFull@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "StarFull@2x.png"; sourceTree = "<group>"; };
 		7F7A9F0A1A5016E500B542DA /* StarFullLarge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = StarFullLarge.png; sourceTree = "<group>"; };
 		7F7A9F0B1A5016E500B542DA /* StarFullLarge@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "StarFullLarge@2x.png"; sourceTree = "<group>"; };
+		7F84C4B31A5F513E00119B24 /* SearchView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchView.xib; sourceTree = "<group>"; };
+		7F84C4B51A5F948800119B24 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		7F84C4B61A5F948800119B24 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		7F84C4B81A5F949F00119B24 /* DiveDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiveDetailController.h; sourceTree = "<group>"; };
+		7F84C4B91A5F949F00119B24 /* DiveDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiveDetailController.m; sourceTree = "<group>"; };
 		7FA61E7C1A57723C00ABCB91 /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
 		7FA61E7D1A57723C00ABCB91 /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
 		7FA61E871A5A3B6A00ABCB91 /* full_flag.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = full_flag.png; sourceTree = "<group>"; };
@@ -152,7 +160,7 @@
 		7FBBAA1C1A401D9400B312D6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		7FBBAA1E1A401DA000B312D6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		7FBBAA201A401EA900B312D6 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
-		7FBBAA221A401F7200B312D6 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleMaps.bundle; sourceTree = "<group>"; };
+		7FBBAA221A401F7200B312D6 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = DivePro/GoogleMaps.bundle; sourceTree = "<group>"; };
 		7FBBAA241A409F9400B312D6 /* arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow.png; sourceTree = "<group>"; };
 		7FBBAA261A40A10300B312D6 /* arrow@1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow@1.png"; sourceTree = "<group>"; };
 		7FBBAA281A41E6DC00B312D6 /* DiveListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiveListController.h; sourceTree = "<group>"; };
@@ -163,6 +171,8 @@
 		7FBBAA331A42093300B312D6 /* place_picker_nav_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "place_picker_nav_back@2x.png"; path = "GoogleMaps.bundle/place_picker_nav_back@2x.png"; sourceTree = "<group>"; };
 		7FBBAA341A42093300B312D6 /* place_picker_search_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = place_picker_search_icon.png; path = GoogleMaps.bundle/place_picker_search_icon.png; sourceTree = "<group>"; };
 		7FBBAA351A42093300B312D6 /* place_picker_search_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "place_picker_search_icon@2x.png"; path = "GoogleMaps.bundle/place_picker_search_icon@2x.png"; sourceTree = "<group>"; };
+		7FBEC2571A661DD700F444DA /* DiveCellCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiveCellCollectionViewCell.h; sourceTree = "<group>"; };
+		7FBEC2581A661DD700F444DA /* DiveCellCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiveCellCollectionViewCell.m; sourceTree = "<group>"; };
 		7FC4878F1A37C83E0021C563 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon@2x.png"; path = "../icon@2x.png"; sourceTree = "<group>"; };
 		7FC487901A37C83E0021C563 /* xq_icon_more.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = xq_icon_more.png; path = ../xq_icon_more.png; sourceTree = "<group>"; };
 		7FC487911A37C83E0021C563 /* xq_icon_distance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = xq_icon_distance.png; path = ../xq_icon_distance.png; sourceTree = "<group>"; };
@@ -195,6 +205,7 @@
 		7FE1CB271A31A7FE001C8FD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FE1CB281A31A7FE001C8FD2 /* DiveProTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DiveProTests.m; sourceTree = "<group>"; };
 		7FF2EEEA1A35B911005CA3CD /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		7FFE42B31A5DCC410070CC7C /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../FacebookSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +213,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FFE42B51A5DCD7B0070CC7C /* ParseFacebookUtils.framework in Frameworks */,
 				7F796ED51A4A06E00070129F /* ParseCrashReporting.framework in Frameworks */,
 				7F796ED41A4A06D30070129F /* libstdc++.6.dylib in Frameworks */,
 				7F796ED21A4A05940070129F /* Social.framework in Frameworks */,
@@ -215,12 +227,12 @@
 				7F60D7C51A4A00DC009A57A7 /* CoreText.framework in Frameworks */,
 				7F796ED01A4A053D0070129F /* ParseUI.framework in Frameworks */,
 				7F60D7C41A4A00CD009A57A7 /* CoreData.framework in Frameworks */,
+				7FFE42B41A5DCC410070CC7C /* FacebookSDK.framework in Frameworks */,
 				7F60D7C31A4A00B8009A57A7 /* AVFoundation.framework in Frameworks */,
 				7FB5793E1A4A002F007791D4 /* GoogleMaps.framework in Frameworks */,
 				7FB579391A49FEE8007791D4 /* libsqlite3.dylib in Frameworks */,
 				7FB579361A49FEC6007791D4 /* SystemConfiguration.framework in Frameworks */,
 				7FB579351A49FEBD007791D4 /* StoreKit.framework in Frameworks */,
-				7F796ECC1A4A053D0070129F /* Bolts.framework in Frameworks */,
 				7FB579341A49FEB5007791D4 /* Security.framework in Frameworks */,
 				7FB579331A49FEAA007791D4 /* QuartzCore.framework in Frameworks */,
 				7FB579321A49FEA2007791D4 /* MobileCoreServices.framework in Frameworks */,
@@ -295,7 +307,8 @@
 			isa = PBXGroup;
 			children = (
 				7F796ED31A4A06D30070129F /* libstdc++.6.dylib */,
-				7F796EC71A4A053D0070129F /* Bolts.framework */,
+				7FBBAA221A401F7200B312D6 /* GoogleMaps.bundle */,
+				7FFE42B31A5DCC410070CC7C /* FacebookSDK.framework */,
 				7F796EC81A4A053D0070129F /* Parse.framework */,
 				7F796EC91A4A053D0070129F /* ParseCrashReporting.framework */,
 				7F796ECA1A4A053D0070129F /* ParseFacebookUtils.framework */,
@@ -346,7 +359,6 @@
 				7FBBAA2E1A42071B00B312D6 /* ImageAssets */,
 				7FE1CB191A31A7FE001C8FD2 /* Images.xcassets */,
 				7FE1CB1B1A31A7FE001C8FD2 /* LaunchScreen.xib */,
-				7FBBAA221A401F7200B312D6 /* GoogleMaps.bundle */,
 				7FE1CB091A31A7FD001C8FD2 /* Supporting Files */,
 			);
 			path = DivePro;
@@ -388,6 +400,13 @@
 				7F196F611A5152D4006BB1C6 /* DiveListCellTableViewCell.m */,
 				7FA61E7C1A57723C00ABCB91 /* TabBarController.h */,
 				7FA61E7D1A57723C00ABCB91 /* TabBarController.m */,
+				7F84C4B31A5F513E00119B24 /* SearchView.xib */,
+				7F84C4B51A5F948800119B24 /* ViewController.h */,
+				7F84C4B61A5F948800119B24 /* ViewController.m */,
+				7F84C4B81A5F949F00119B24 /* DiveDetailController.h */,
+				7F84C4B91A5F949F00119B24 /* DiveDetailController.m */,
+				7FBEC2571A661DD700F444DA /* DiveCellCollectionViewCell.h */,
+				7FBEC2581A661DD700F444DA /* DiveCellCollectionViewCell.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -458,6 +477,7 @@
 				TargetAttributes = {
 					7FE1CB051A31A7FD001C8FD2 = {
 						CreatedOnToolsVersion = 6.0.1;
+						DevelopmentTeam = 24AD2BPGNN;
 					};
 					7FE1CB211A31A7FE001C8FD2 = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -472,6 +492,7 @@
 			knownRegions = (
 				en,
 				Base,
+				he,
 			);
 			mainGroup = 7FE1CAFD1A31A7FD001C8FD2;
 			productRefGroup = 7FE1CB071A31A7FD001C8FD2 /* Products */;
@@ -489,8 +510,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7FA61E8C1A5A4F6200ABCB91 /* Bolts.framework in Resources */,
 				7FA61E8B1A5A4F5900ABCB91 /* Parse.framework in Resources */,
+				7F84C4B41A5F513E00119B24 /* SearchView.xib in Resources */,
 				7FA61E8A1A5A3B6A00ABCB91 /* empty_flag.png in Resources */,
 				7FB578F41A48CCE9007791D4 /* InfoWindow.xib in Resources */,
 				7F7A9F0F1A5016E500B542DA /* StarEmptyLarge@2x.png in Resources */,
@@ -547,10 +568,13 @@
 				7FE1CB0F1A31A7FD001C8FD2 /* AppDelegate.m in Sources */,
 				7FC487BE1A37C93A0021C563 /* UIImageView+DispatchLoad.m in Sources */,
 				7FE1CB121A31A7FD001C8FD2 /* FirstViewController.m in Sources */,
+				7F84C4BA1A5F949F00119B24 /* DiveDetailController.m in Sources */,
 				7F7A9F031A5013A300B542DA /* DYRateView.m in Sources */,
+				7FBEC2591A661DD700F444DA /* DiveCellCollectionViewCell.m in Sources */,
 				7F196F621A5152D4006BB1C6 /* DiveListCellTableViewCell.m in Sources */,
 				7F5ACA2F1A4FCAE50080A87D /* DiveLocation.m in Sources */,
 				7FC487BB1A37C8C00021C563 /* PlaceDetailVO.m in Sources */,
+				7F84C4B71A5F948800119B24 /* ViewController.m in Sources */,
 				7FC487C11A37C95E0021C563 /* DealHelper.m in Sources */,
 				7FC487B71A37C8A50021C563 /* MapCell.m in Sources */,
 				7FA61E7E1A57723C00ABCB91 /* TabBarController.m in Sources */,
@@ -679,18 +703,25 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/GoogleMaps-iOS-1.9.1",
 					"$(PROJECT_DIR)/parse-library-1.6.1",
 					"$(PROJECT_DIR)",
 					"$(SRCROOT)/parse-library-1.6.1",
+					"$(PROJECT_DIR)/FacebookSDK",
+					/Users/JonKotowski/Documents/FacebookSDK,
+					/Users/JonKotowski/Documents,
 				);
 				INFOPLIST_FILE = DivePro/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -698,6 +729,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"//:configuration",
@@ -717,11 +750,16 @@
 					"$(PROJECT_DIR)/parse-library-1.6.1",
 					"$(PROJECT_DIR)",
 					"$(SRCROOT)/parse-library-1.6.1",
+					"$(PROJECT_DIR)/FacebookSDK",
+					/Users/JonKotowski/Documents/FacebookSDK,
+					/Users/JonKotowski/Documents,
 				);
 				INFOPLIST_FILE = DivePro/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = "armv7 armv7s";
 			};
 			name = Release;
 		};

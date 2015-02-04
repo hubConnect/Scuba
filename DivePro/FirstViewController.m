@@ -29,6 +29,7 @@
     NSOperationQueue *opQueue;
     NSOperationQueue *mainQueue;
     NSMutableArray *arrayOfMarkers;
+    UIBarButtonItem *showButton;
 }
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
@@ -56,6 +57,11 @@
     NSLog(@"Long press at - %lf %lf ", coordinate.longitude, coordinate.latitude);
 }
 
+- (void) viewWillAppear:(BOOL)animated {
+    
+    [self setButton];
+}
+
 -(void)viewDidAppear:(BOOL)animated
 {
     UIBarButtonItem *button = [[UIBarButtonItem alloc] init];
@@ -66,6 +72,23 @@
     NSLog(@"Button items added");
     
     
+}
+
+- (void) setButton {
+    
+    
+    showButton = [[UIBarButtonItem alloc] initWithTitle:@"Show" style:UIBarButtonItemStylePlain target:self action:@selector(addMarkersToMap)];
+    showButton.title = @"Refresh";
+    
+    AppDelegate *appD = [UIApplication sharedApplication].delegate;
+    appD.mainNav.topViewController.navigationItem.rightBarButtonItem = showButton;
+    
+}
+
+-(void) addMarkersToMap {
+    
+    [mapView_ clear];
+    [self addMarkersToMap:arrayOfLocations inGroupsOf:4];
 }
 
 - (UIView *)mapView:(GMSMapView *)mapView markerInfoWindow:(GMSMarker *)marker {
@@ -93,6 +116,10 @@
 
 -(void)mapView:(GMSMapView *)mapView didTapInfoWindowOfMarker:(GMSMarker *)marker {
     NSLog(@"Hit info window");
+    AppDelegate *appD = [UIApplication sharedApplication].delegate;
+    appD.DiveToShow = (DiveLocation *) marker.userData;
+    [self.tabBarController performSegueWithIdentifier:@"PushDetail" sender:self];
+    
 }
 
 -(BOOL)mapView:(GMSMapView *)mapView didTapMarker:(GMSMarker *)marker
@@ -153,9 +180,8 @@
 
     }];
     
-    [self downloadLocations];
-    //[self buildRandomMarkers:50];
-    [self addMarkersToMap:arrayOfLocations inGroupsOf:4];
+    //[self downloadLocations];
+    [self buildRandomMarkers:100];
     AppDelegate *appD = [UIApplication sharedApplication].delegate;
     
     NSLog(@"starting");
@@ -282,30 +308,37 @@
 
 - (BOOL) addMarkersToMap : (NSArray
                             *) arrayOfMarkers inGroupsOf: (int) amount {
+    
     NSLog(@"Adding markers");
     
     __block NSMutableArray *tempArray = [[NSMutableArray alloc] init];
     
+    
     [opQueue addOperationWithBlock:^{
+        
         NSLog(@"%d items in array",tempArray.count);
         for (DiveLocation * location in arrayOfLocations  ) {
-            [mainQueue addOperationWithBlock:^{
+            
                 
                 [tempArray addObject:location];
                 
                 if ((tempArray.count % amount == 0)) {
+                    NSArray *secondTemp = [tempArray copy];
                     
-                    for (DiveLocation *dive in tempArray) {
-                        [self buildMarker:dive];
-                        NSLog(@"Adding a marker!");
-                    }
+                    [mainQueue addOperationWithBlock:^{
+                        for (DiveLocation *dive in secondTemp) {
+                            [self buildMarker:dive];
+                            NSLog(@"Adding a marker!");
+                        }
+                    }];
+
                     
                     [tempArray removeAllObjects];
-                    [NSThread sleepForTimeInterval:.05];
                 }
-            }];
-        }
-        NSLog(@"%d",tempArray.count);
+            
+                [NSThread sleepForTimeInterval:.05];
+            }
+        
         
         if (tempArray.count != 0) {
             for (DiveLocation *dive in tempArray) {

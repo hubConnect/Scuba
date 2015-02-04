@@ -12,6 +12,7 @@
 #import "DiveLocation.h"
 #import "DYRateView.h"
 #import <Parse/Parse.h>
+#import <FacebookSDK/FacebookSDK.h>
 @interface DiveListController ()
 
 @end
@@ -19,6 +20,8 @@
 @implementation DiveListController
 
 NSArray *arrayOfLocations;
+
+UIBarButtonItem *showButton;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -29,16 +32,53 @@ NSArray *arrayOfLocations;
     AppDelegate *appD = [UIApplication sharedApplication].delegate;
     appD.DLC = self.DiveListTableView;
     
+    [self setButton];
+    
     [self updateLocations];
     // Do any additional setup after loading the view.
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    FBLoginView * login = [[FBLoginView alloc] init];
+    login.center = self.view.center;
+    [self.view addSubview:login];
+}
+
+- (void) setButton {
+    
+    
+    showButton = [[UIBarButtonItem alloc] initWithTitle:@"Show" style:UIBarButtonItemStylePlain target:self action:@selector(viewWillDisappear:)];
+    showButton.title = @"Show";
+
+        
+}
+
+- (UIImage *)imageWithColor:(UIColor *)color {
+    CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    CGContextFillRect(context, rect);
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated {
     
     
-    UIBarButtonItem *anotherButton = [[UIBarButtonItem alloc] initWithTitle:@"Show" style:UIBarButtonItemStylePlain target:self action:@selector(didReceiveMemoryWarning:)];
-    self.tabBarController.navigationController.navigationItem.rightBarButtonItem = anotherButton;
+    AppDelegate *appD = [UIApplication sharedApplication].delegate;
+    appD.mainNav.topViewController.navigationItem.rightBarButtonItem = showButton;
+    
     [self updateLocations];
+    NSLog(@"Coming into view");
     
     
 }

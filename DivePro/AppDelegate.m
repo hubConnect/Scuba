@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import <GoogleMaps/GoogleMaps.h>
 #import <Parse/Parse.h>
+#import <FacebookSDK/FacebookSDK.h>
+
 
 @interface AppDelegate ()
 
@@ -41,6 +43,8 @@ UITabBarController *UITB;
                                                             NSFontAttributeName : [UIFont fontWithName:@"EuphemiaUCAS" size:0.0f],
                                                             NSShadowAttributeName : shadow
                                                             }];
+    
+    
     return YES;
 }
 
@@ -60,6 +64,7 @@ UITabBarController *UITB;
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    [FBAppEvents activateApp];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
