@@ -10,6 +10,7 @@
 #import "FirstViewController.h"
 #import "PlaceDetailVO.h"
 #import "InfoWindow.h"
+#import <ParseFacebookUtils/PFFacebookUtils.h>
 #import <Parse/Parse.h>
 #import "DiveLocation.h"
 #import "DYRateView.h"
@@ -32,6 +33,7 @@
     UIBarButtonItem *showButton;
 }
 
+    bool firstLoad = YES;
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
     NSLog(@"Touches Ended");
@@ -84,6 +86,7 @@
     appD.mainNav.topViewController.navigationItem.rightBarButtonItem = showButton;
     
 }
+
 
 -(void) addMarkersToMap {
     
@@ -140,6 +143,21 @@
     return NO;
 }
 
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
+    if (firstLoad) {
+        
+        
+        GMSCameraPosition *camera = [GMSCameraPosition cameraWithLatitude:newLocation.coordinate.latitude
+                                                                longitude:newLocation.coordinate.longitude
+                                                                     zoom:12];
+        [mapView_ animateToCameraPosition:camera];
+        firstLoad = NO;
+    }
+    NSLog(@"LocationUpdated");
+    //...
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     opQueue = [[NSOperationQueue alloc] init];
@@ -157,32 +175,37 @@
     mapView_ = [GMSMapView mapWithFrame:CGRectZero camera:camera];
     
     self.view = mapView_;
-    mapView_.myLocationEnabled = YES;
+    
     mapView_.mapType = kGMSTypeSatellite;
     
     mapView_.camera = [GMSCameraPosition cameraWithLatitude:mapView_.myLocation.coordinate.latitude longitude:mapView_.myLocation.coordinate.longitude zoom:1];
 
     mapView_.delegate = self;
 
-    [opQueue addOperationWithBlock:^{
         
         
         locationManager = [[CLLocationManager alloc] init];
         locationManager.distanceFilter = kCLDistanceFilterNone;
         locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters; // 100 m
+        locationManager.delegate = self;
         
         
+        [locationManager requestWhenInUseAuthorization];
         [locationManager startUpdatingLocation];
+        NSLog(@"%lf lat",locationManager.location.coordinate.latitude);
         
+        mapView_.myLocationEnabled = YES;
         // Creating test markers.
         
-        
-
-    }];
     
-    //[self downloadLocations];
-    [self buildRandomMarkers:100];
-    AppDelegate *appD = [UIApplication sharedApplication].delegate;
+    
+    [self downloadLocations];
+    //[self buildRandomMarkers:100];
+    
+    
+    mapView_.settings.myLocationButton = YES;
+    
+    
     
     NSLog(@"starting");
 }
@@ -192,10 +215,17 @@
     
     AppDelegate *appd = [UIApplication sharedApplication].delegate;
 
+    
+    PFGeoPoint *myPoint = [[PFGeoPoint alloc] init];
+    myPoint.longitude = locationManager.location.coordinate.longitude;
+    myPoint.latitude = locationManager.location.coordinate.latitude;
+    
     PFQuery *query = [PFQuery queryWithClassName:@"Dive"];
+    [query whereKey:@"Location" nearGeoPoint:myPoint withinMiles:1000];
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         NSLog(@"Fetching");
         if (!error) {
+            NSLog(@"count %i",objects.count);
             for (PFObject *object in objects) {
                 
                 NSString *string = [object objectForKey:@"Name"];
@@ -215,14 +245,13 @@
                 [arrayOfLocations addObject:theLocation];
                 
                 
+                
             }
         } else {
             NSLog(@"Error fetching");
         }
         
         NSLog(@"Fetched");
-        
-        [self addMarkersToMap:arrayOfLocations inGroupsOf:60];
         appd.arrayOfLocations = arrayOfLocations;
     }];
 }

@@ -7,9 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FacebookSDK/FacebookSDK.h>
 
 @interface DiveListController : UIViewController
-<UITableViewDataSource,UITableViewDelegate>
+<UITableViewDataSource,UITableViewDelegate,FBLoginViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UITableView *DiveListTableView;
 

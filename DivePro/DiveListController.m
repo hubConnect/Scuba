@@ -38,9 +38,16 @@ UIBarButtonItem *showButton;
     // Do any additional setup after loading the view.
 }
 
+-(void)loginViewFetchedUserInfo:(FBLoginView *)loginView user:(id<FBGraphUser>)user{
+    NSLog(@"yeah %@",user.name);
+}
+
 - (void)viewDidAppear:(BOOL)animated {
-    FBLoginView * login = [[FBLoginView alloc] init];
+    FBLoginView *login =
+    [[FBLoginView alloc] initWithReadPermissions:
+     @[@"public_profile", @"email", @"user_friends"]];
     login.center = self.view.center;
+    login.delegate = self;
     [self.view addSubview:login];
 
 }
@@ -68,6 +75,9 @@ UIBarButtonItem *showButton;
     }];
 }
 
+-(void)loginView:(FBLoginView *)loginView handleError:(NSError *)error {
+    NSLog(@"Error");
+}
 - (void) setButton {
     
     
@@ -75,6 +85,10 @@ UIBarButtonItem *showButton;
     showButton.title = @"Filter";
 
         
+}
+
+- (void)loginViewShowingLoggedInUser:(FBLoginView *)loginView {
+    NSLog(@"bam");
 }
 
 - (UIImage *)imageWithColor:(UIColor *)color {

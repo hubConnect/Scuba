@@ -11,7 +11,7 @@
 #import <GoogleMaps/GoogleMaps.h>
 
 @interface FirstViewController : UIViewController
-<GMSMapViewDelegate>
+<GMSMapViewDelegate,CLLocationManagerDelegate>
 
 
 @end
