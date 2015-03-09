@@ -57,30 +57,42 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
-                            </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7CD-fz-6fW">
-                                <rect key="frame" x="538" y="71" width="46" height="30"/>
-                                <state key="normal" title="Filter">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="338" y="64" width="62" height="44"/>
+                                    <rect key="frame" x="0.0" y="108" width="400" height="442"/>
                                 </variation>
-                            </button>
-                            <searchBar contentMode="redraw" ambiguous="YES" misplaced="YES" searchBarStyle="minimal" text="" translatesAutoresizingMaskIntoConstraints="NO" id="yqi-aa-aWy">
-                                <rect key="frame" x="0.0" y="64" width="526" height="44"/>
-                                <color key="barTintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="ned-ur-e78">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <color key="barTintColor" red="0.9137254901960784" green="0.44705882352941179" blue="0.15686274509803921" alpha="1" colorSpace="calibratedRGB"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="-3" y="64" width="341" height="44"/>
+                                <variation key="widthClass=compact" ambiguous="YES">
+                                    <rect key="frame" x="0.0" y="64" width="400" height="44"/>
                                 </variation>
                             </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="2Wm-bd-tGc" firstAttribute="top" secondItem="yqi-aa-aWy" secondAttribute="bottom" constant="2" id="T4r-mk-v2S"/>
-                            <constraint firstItem="2Wm-bd-tGc" firstAttribute="width" secondItem="uub-5n-tud" secondAttribute="width" id="hFm-UP-Fs0"/>
+                            <constraint firstItem="ned-ur-e78" firstAttribute="width" secondItem="uub-5n-tud" secondAttribute="width" id="2X8-qY-EQm"/>
+                            <constraint firstItem="ned-ur-e78" firstAttribute="top" secondItem="QQW-yf-97g" secondAttribute="bottom" id="Sxf-0A-8uu"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="ned-ur-e78"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="2X8-qY-EQm"/>
+                                <exclude reference="Sxf-0A-8uu"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="ned-ur-e78"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="2X8-qY-EQm"/>
+                                <include reference="Sxf-0A-8uu"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="search" id="Z4Z-Rk-YZY"/>
                     <connections>
@@ -89,7 +101,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QOh-BD-hSR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="846" y="763"/>
+            <point key="canvasLocation" x="799.5" y="763"/>
         </scene>
         <!--Dive Detail Controller-->
         <scene sceneID="Xde-mh-PLh">

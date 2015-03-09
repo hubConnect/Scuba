@@ -20,6 +20,7 @@
 		7F60D7C81A4A00FB009A57A7 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FBBAA141A401D6700B312D6 /* libc++.dylib */; };
 		7F60D7C91A4A0109009A57A7 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FBBAA161A401D7600B312D6 /* libicucore.dylib */; };
 		7F60D7CA1A4A011B009A57A7 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FBBAA1A1A401D8B00B312D6 /* OpenGLES.framework */; };
+		7F66CFEC1AA063810098C637 /* bubbel.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F66CFEB1AA063810098C637 /* bubbel.png */; };
 		7F796ECD1A4A053D0070129F /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F796EC81A4A053D0070129F /* Parse.framework */; };
 		7F796ED01A4A053D0070129F /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F796ECB1A4A053D0070129F /* ParseUI.framework */; };
 		7F796ED11A4A058A0070129F /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FB5793C1A49FF65007791D4 /* Accounts.framework */; };
@@ -110,6 +111,7 @@
 		7F5ACA2B1A4FCA140080A87D /* DiveRowCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiveRowCell.xib; sourceTree = "<group>"; };
 		7F5ACA2D1A4FCAE50080A87D /* DiveLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiveLocation.h; sourceTree = "<group>"; };
 		7F5ACA2E1A4FCAE50080A87D /* DiveLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiveLocation.m; sourceTree = "<group>"; };
+		7F66CFEB1AA063810098C637 /* bubbel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubbel.png; sourceTree = "<group>"; };
 		7F796EC81A4A053D0070129F /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "parse-library-1.6.1/Parse.framework"; sourceTree = "<group>"; };
 		7F796EC91A4A053D0070129F /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = "parse-library-1.6.1/ParseCrashReporting.framework"; sourceTree = "<group>"; };
 		7F796ECA1A4A053D0070129F /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = "parse-library-1.6.1/ParseFacebookUtils.framework"; sourceTree = "<group>"; };
@@ -367,6 +369,7 @@
 		7FE1CB091A31A7FD001C8FD2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7F66CFEB1AA063810098C637 /* bubbel.png */,
 				7FBBAA281A41E6DC00B312D6 /* DiveListController.h */,
 				7FE1CB0E1A31A7FD001C8FD2 /* AppDelegate.m */,
 				7FBBAA291A41E6DC00B312D6 /* DiveListController.m */,
@@ -543,6 +546,7 @@
 				7FC487A61A37C83E0021C563 /* dot.png in Resources */,
 				7FC487A31A37C83E0021C563 /* xq_icon_distance.png in Resources */,
 				7F7A9F111A5016E500B542DA /* StarFull@2x.png in Resources */,
+				7F66CFEC1AA063810098C637 /* bubbel.png in Resources */,
 				7FE1CB1A1A31A7FE001C8FD2 /* Images.xcassets in Resources */,
 				7F7A9F101A5016E500B542DA /* StarFull.png in Resources */,
 			);
