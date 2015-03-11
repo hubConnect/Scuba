@@ -21,6 +21,7 @@
 		7F60D7C91A4A0109009A57A7 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FBBAA161A401D7600B312D6 /* libicucore.dylib */; };
 		7F60D7CA1A4A011B009A57A7 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FBBAA1A1A401D8B00B312D6 /* OpenGLES.framework */; };
 		7F66CFEC1AA063810098C637 /* bubbel.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F66CFEB1AA063810098C637 /* bubbel.png */; };
+		7F780B121AAE584900FD3DF3 /* MyInvoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F780B111AAE584900FD3DF3 /* MyInvoViewController.m */; };
 		7F796ECD1A4A053D0070129F /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F796EC81A4A053D0070129F /* Parse.framework */; };
 		7F796ED01A4A053D0070129F /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F796ECB1A4A053D0070129F /* ParseUI.framework */; };
 		7F796ED11A4A058A0070129F /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FB5793C1A49FF65007791D4 /* Accounts.framework */; };
@@ -112,6 +113,8 @@
 		7F5ACA2D1A4FCAE50080A87D /* DiveLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiveLocation.h; sourceTree = "<group>"; };
 		7F5ACA2E1A4FCAE50080A87D /* DiveLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiveLocation.m; sourceTree = "<group>"; };
 		7F66CFEB1AA063810098C637 /* bubbel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubbel.png; sourceTree = "<group>"; };
+		7F780B101AAE584900FD3DF3 /* MyInvoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyInvoViewController.h; sourceTree = "<group>"; };
+		7F780B111AAE584900FD3DF3 /* MyInvoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyInvoViewController.m; sourceTree = "<group>"; };
 		7F796EC81A4A053D0070129F /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "parse-library-1.6.1/Parse.framework"; sourceTree = "<group>"; };
 		7F796EC91A4A053D0070129F /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = "parse-library-1.6.1/ParseCrashReporting.framework"; sourceTree = "<group>"; };
 		7F796ECA1A4A053D0070129F /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = "parse-library-1.6.1/ParseFacebookUtils.framework"; sourceTree = "<group>"; };
@@ -410,6 +413,8 @@
 				7F84C4B91A5F949F00119B24 /* DiveDetailController.m */,
 				7FBEC2571A661DD700F444DA /* DiveCellCollectionViewCell.h */,
 				7FBEC2581A661DD700F444DA /* DiveCellCollectionViewCell.m */,
+				7F780B101AAE584900FD3DF3 /* MyInvoViewController.h */,
+				7F780B111AAE584900FD3DF3 /* MyInvoViewController.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -569,6 +574,7 @@
 				7F4D3B011A45674800F432D2 /* InfoWindow.m in Sources */,
 				7FBBAA311A4207BC00B312D6 /* MainTabController.m in Sources */,
 				7FE1CB151A31A7FD001C8FD2 /* SecondViewController.m in Sources */,
+				7F780B121AAE584900FD3DF3 /* MyInvoViewController.m in Sources */,
 				7FE1CB0F1A31A7FD001C8FD2 /* AppDelegate.m in Sources */,
 				7FC487BE1A37C93A0021C563 /* UIImageView+DispatchLoad.m in Sources */,
 				7FE1CB121A31A7FD001C8FD2 /* FirstViewController.m in Sources */,

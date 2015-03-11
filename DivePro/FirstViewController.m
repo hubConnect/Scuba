@@ -153,6 +153,7 @@
                                                                      zoom:12];
         [mapView_ animateToCameraPosition:camera];
         firstLoad = NO;
+        [locationManager stopUpdatingLocation];
     }
     NSLog(@"LocationUpdated");
     //...
@@ -199,7 +200,7 @@
         
     
     
-    [self downloadLocations];
+    [self downloadLocations:1000];
     //[self buildRandomMarkers:100];
     
     
@@ -210,7 +211,7 @@
     NSLog(@"starting");
 }
 
-- (void) downloadLocations {
+- (void) downloadLocations:(double) miles {
     arrayOfLocations = [[NSMutableArray alloc]init];
     
     AppDelegate *appd = [UIApplication sharedApplication].delegate;
@@ -221,7 +222,8 @@
     myPoint.latitude = locationManager.location.coordinate.latitude;
     
     PFQuery *query = [PFQuery queryWithClassName:@"Dive"];
-    [query whereKey:@"Location" nearGeoPoint:myPoint withinMiles:1000];
+    [query whereKey:@"Location" nearGeoPoint:myPoint withinMiles:miles];
+    
     [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
         NSLog(@"Fetching");
         if (!error) {
@@ -243,8 +245,6 @@
                 PFFile *object2 = ((PFFile *)[theLocation.Pictures firstObject]);
                 NSLog(@"Getting");
                 [arrayOfLocations addObject:theLocation];
-                
-                
                 
             }
         } else {

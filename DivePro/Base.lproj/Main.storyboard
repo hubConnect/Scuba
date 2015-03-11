@@ -194,10 +194,10 @@
             </objects>
             <point key="canvasLocation" x="-146" y="-823"/>
         </scene>
-        <!--View Controller-->
+        <!--Me-->
         <scene sceneID="NfK-yZ-ylL">
             <objects>
-                <viewController id="faI-rs-tnk" sceneMemberID="viewController">
+                <viewController id="faI-rs-tnk" customClass="MyInvoViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="H2b-4Q-3ZQ"/>
                         <viewControllerLayoutGuide type="bottom" id="SDF-Lf-so8"/>
@@ -205,9 +205,78 @@
                     <view key="view" contentMode="scaleToFill" id="FDm-zC-8eD">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jAQ-ab-BI0">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Facebook">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="165" y="72" width="70" height="46"/>
+                                </variation>
+                                <connections>
+                                    <action selector="FacebookHit:" destination="faI-rs-tnk" eventType="touchUpInside" id="t09-vw-BOF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YPM-h1-hCV">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Parse">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="177" y="126" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="ParseHit:" destination="faI-rs-tnk" eventType="touchUpInside" id="qyA-Aw-fg3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yom-Dn-3tm">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Twitter">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="177" y="171" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="TwitterHit:" destination="faI-rs-tnk" eventType="touchUpInside" id="H4M-WX-EkY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T4R-KR-ZvB">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="177" y="255" width="46" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="pow:" destination="faI-rs-tnk" eventType="touchUpInside" id="q7J-uR-PwJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="jAQ-ab-BI0"/>
+                                <exclude reference="YPM-h1-hCV"/>
+                                <exclude reference="yom-Dn-3tm"/>
+                                <exclude reference="T4R-KR-ZvB"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="jAQ-ab-BI0"/>
+                                <include reference="YPM-h1-hCV"/>
+                                <include reference="yom-Dn-3tm"/>
+                                <include reference="T4R-KR-ZvB"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="featured" id="hMh-in-Yt4"/>
+                    <tabBarItem key="tabBarItem" title="Me" badgeValue="Me" id="hMh-in-Yt4"/>
+                    <connections>
+                        <outlet property="FacebookHit" destination="jAQ-ab-BI0" id="Qag-7K-fB3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NIp-na-pmr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -224,13 +293,56 @@
                     <view key="view" contentMode="scaleToFill" id="ZFb-Rk-tfx">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7u-BW-wyf">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Facebook">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="165" y="130" width="70" height="46"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="maR-EZ-LMK">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Parse">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="177" y="184" width="46" height="30"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EHn-ka-agr">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Twitter">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="177" y="229" width="46" height="30"/>
+                                </variation>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="J7u-BW-wyf"/>
+                                <exclude reference="maR-EZ-LMK"/>
+                                <exclude reference="EHn-ka-agr"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="J7u-BW-wyf"/>
+                                <include reference="maR-EZ-LMK"/>
+                                <include reference="EHn-ka-agr"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="more" id="1hg-FF-8aG"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dms-Yz-YZX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2452" y="778"/>
+            <point key="canvasLocation" x="2451" y="786"/>
         </scene>
         <!--Nearby-->
         <scene sceneID="haI-a6-7og">
