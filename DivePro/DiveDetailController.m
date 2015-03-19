@@ -42,7 +42,7 @@ DiveLocation *DiveToShow;
                                               forIndexPath:indexPath];
     
     UIImageView *recipeImageView = (UIImageView *)[cell viewWithTag:1001];
-    recipeImageView.image = [UIImage imageNamed:@"arrow"];
+    recipeImageView.image = [UIImage imageNamed:@"arrow.png"];
     
     
     return cell;

@@ -10,6 +10,7 @@
 #import <Parse/Parse.h>
 #import <ParseUI/ParseUI.h>
 #import <ParseFacebookUtils/PFFacebookUtils.h>
+#import "LoginView.h"
 
 @interface MyInvoViewController ()
 
@@ -22,6 +23,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    BOOL linkedWithFacebook = [PFFacebookUtils isLinkedWithUser:[PFUser currentUser]];
+    NSLog(@"%@",[PFUser currentUser].username );
+    [PFUser logOut];
+    if ([PFUser currentUser] ) {
+        
+        
+    }
+    if (linkedWithFacebook) {
+        NSLog(@"logged in with facebook");
+    }
+    
+    LoginView *theView = [[LoginView alloc] init];
+  
+    
+    [self.view addSubview:theView];
     // Do any additional setup after loading the view.
 }
 

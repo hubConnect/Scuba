@@ -200,8 +200,8 @@
         
     
     
-    [self downloadLocations:1000];
-    //[self buildRandomMarkers:100];
+    //[self downloadLocations:1000];
+    [self buildRandomMarkers:100];
     
     
     mapView_.settings.myLocationButton = YES;

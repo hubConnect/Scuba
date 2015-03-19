@@ -22,6 +22,8 @@
 		7F60D7CA1A4A011B009A57A7 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FBBAA1A1A401D8B00B312D6 /* OpenGLES.framework */; };
 		7F66CFEC1AA063810098C637 /* bubbel.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F66CFEB1AA063810098C637 /* bubbel.png */; };
 		7F780B121AAE584900FD3DF3 /* MyInvoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F780B111AAE584900FD3DF3 /* MyInvoViewController.m */; };
+		7F780B141ABAB44900FD3DF3 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7F780B131ABAB44900FD3DF3 /* LoginView.xib */; };
+		7F780B171ABABBCF00FD3DF3 /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F780B161ABABBCF00FD3DF3 /* LoginView.m */; };
 		7F796ECD1A4A053D0070129F /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F796EC81A4A053D0070129F /* Parse.framework */; };
 		7F796ED01A4A053D0070129F /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F796ECB1A4A053D0070129F /* ParseUI.framework */; };
 		7F796ED11A4A058A0070129F /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FB5793C1A49FF65007791D4 /* Accounts.framework */; };
@@ -115,6 +117,9 @@
 		7F66CFEB1AA063810098C637 /* bubbel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bubbel.png; sourceTree = "<group>"; };
 		7F780B101AAE584900FD3DF3 /* MyInvoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyInvoViewController.h; sourceTree = "<group>"; };
 		7F780B111AAE584900FD3DF3 /* MyInvoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyInvoViewController.m; sourceTree = "<group>"; };
+		7F780B131ABAB44900FD3DF3 /* LoginView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginView.xib; sourceTree = "<group>"; };
+		7F780B151ABABBCF00FD3DF3 /* LoginView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginView.h; sourceTree = "<group>"; };
+		7F780B161ABABBCF00FD3DF3 /* LoginView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginView.m; sourceTree = "<group>"; };
 		7F796EC81A4A053D0070129F /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Parse.framework; path = "parse-library-1.6.1/Parse.framework"; sourceTree = "<group>"; };
 		7F796EC91A4A053D0070129F /* ParseCrashReporting.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseCrashReporting.framework; path = "parse-library-1.6.1/ParseCrashReporting.framework"; sourceTree = "<group>"; };
 		7F796ECA1A4A053D0070129F /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = "parse-library-1.6.1/ParseFacebookUtils.framework"; sourceTree = "<group>"; };
@@ -415,6 +420,9 @@
 				7FBEC2581A661DD700F444DA /* DiveCellCollectionViewCell.m */,
 				7F780B101AAE584900FD3DF3 /* MyInvoViewController.h */,
 				7F780B111AAE584900FD3DF3 /* MyInvoViewController.m */,
+				7F780B131ABAB44900FD3DF3 /* LoginView.xib */,
+				7F780B151ABABBCF00FD3DF3 /* LoginView.h */,
+				7F780B161ABABBCF00FD3DF3 /* LoginView.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -533,6 +541,7 @@
 				7F7A9F0E1A5016E500B542DA /* StarEmptyLarge.png in Resources */,
 				7F5ACA2C1A4FCA140080A87D /* DiveRowCell.xib in Resources */,
 				7FBBAA251A409F9400B312D6 /* arrow.png in Resources */,
+				7F780B141ABAB44900FD3DF3 /* LoginView.xib in Resources */,
 				7FC487A71A37C83E0021C563 /* dot@2x.png in Resources */,
 				7FBBAA231A401F7200B312D6 /* GoogleMaps.bundle in Resources */,
 				7FC487A41A37C83E0021C563 /* xq_icon_profile.png in Resources */,
@@ -589,6 +598,7 @@
 				7FC487B71A37C8A50021C563 /* MapCell.m in Sources */,
 				7FA61E7E1A57723C00ABCB91 /* TabBarController.m in Sources */,
 				7FBBAA2A1A41E6DC00B312D6 /* DiveListController.m in Sources */,
+				7F780B171ABABBCF00FD3DF3 /* LoginView.m in Sources */,
 				7FE1CB0C1A31A7FD001C8FD2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
