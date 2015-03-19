@@ -1,2 +1,1 @@
-xdcfvgb
-=======
+Connects to Parse, adds spots with geopoints. Connects to PFUser with or without Facebook. Neat pin-adding to the map in groups to create a cascade effect. Custom annotations and use of PFFiles for user added photos.
